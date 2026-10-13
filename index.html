@@ -168,6 +168,8 @@ footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-
 
 
 /* Personal customizations of the Minimal Light HTML template. */
+.language-switch{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 20px;font:13px/1.5 system-ui,sans-serif;color:#9aa5ad}.language-switch[hidden]{display:none}.language-switch button{appearance:none;background:transparent;border:1px solid transparent;border-radius:4px;padding:6px 8px;min-height:36px;font:inherit;color:#647582;cursor:pointer}.language-switch button:hover{color:#153e60;background:#f3f7fa}.language-switch button[aria-pressed="true"]{color:#153e60;border-color:#d9e3ec;background:#f3f7fa;font-weight:600}html[lang="zh-CN"] body{font-family:Georgia,"PingFang SC","Microsoft YaHei",sans-serif}html[lang="zh-CN"] .publication-venue{font-style:normal}html[lang="zh-CN"] .paper h3{line-height:1.7}
+
 :root{color-scheme:light}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}
 body{font-family:Georgia,"Times New Roman",serif;font-size:15px;line-height:1.65;color:#555}
 .wrapper{width:1000px}header{width:246px;padding-top:66px}section{width:680px;padding-top:66px}
@@ -176,7 +178,7 @@ strong{font-weight:600}h3{font-size:15px;line-height:1.5;font-weight:600;margin:
 p{margin-bottom:17px}.portrait{display:block;object-fit:cover;width:112px;height:112px;border-radius:50%;margin:0 auto 22px}
 .role{font-size:17px;color:#444;margin:0 0 5px}.affiliation{font-size:14px;line-height:1.7;margin:0 0 16px}.email{font:12px/1.7 ui-monospace,monospace;overflow-wrap:anywhere}
 .profile-links{display:flex;justify-content:center;gap:20px;margin:15px 0 22px}.profile-links a{font-size:14px}.page-nav{border-top:1px solid #e8edf0;padding-top:18px;display:flex;flex-direction:column;gap:8px;font-size:13px}.page-nav a{color:#647582}
-a:focus-visible,summary:focus-visible{outline:2px solid #247caf;outline-offset:5px}a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #247caf;outline-offset:5px}a:hover{text-decoration:underline}
 .interests{padding-left:20px}.interests li{padding-left:3px;margin:6px 0}.papers{list-style:none;padding:0;margin:0}.paper{display:grid;grid-template-columns:91px 1fr;gap:18px;margin-bottom:23px}.venue{font:600 10px/1.5 system-ui,sans-serif;letter-spacing:.3px;color:#244d70;border:1px solid #d9e3ec;background:#f7fafc;text-align:center;align-self:start;padding:7px 3px;border-radius:3px}.venue span{display:block;font-size:11px;letter-spacing:0;color:#738496;font-weight:400}.authors{font-size:13px;line-height:1.65;margin:0}.note{font-size:12px;color:#777;margin-top:5px}
 .paper>div{min-width:0}.paper h3{color:#299bc1;font-size:16px;line-height:1.55;margin-bottom:5px}.paper{margin-bottom:32px}.authors{font-size:14px}.publication-venue{font-size:14px;line-height:1.65;font-style:italic;margin:5px 0 0}.paper-figure{position:relative;display:block;align-self:center;width:100%;aspect-ratio:1.5;padding:0;border-radius:9px;background:#fff;box-shadow:3px 4px 9px #0005}.paper-figure img{position:absolute;top:50%;left:5px;display:block;width:calc(100% - 10px);height:auto;aspect-ratio:2.5;object-fit:contain;transform:translateY(-50%)}.figure-badge{position:absolute;top:7px;left:-5px;min-width:68px;padding:2px 12px;border-radius:2px;background:#003778;color:#fff;font-size:12px;line-height:1.6;font-weight:700;text-align:center;box-shadow:0 2px 5px #0003}.paper.has-figure{grid-template-columns:min(40%,270px) minmax(0,1fr);gap:28px;align-items:center}
 .submissions{margin:25px 0;border-top:1px solid #e5ebef;border-bottom:1px solid #e5ebef;padding:12px 0}.submissions summary{cursor:pointer;color:#244d70;font-size:14px}.submissions ol{padding-left:20px;margin:20px 0 5px}.submissions li{margin-bottom:18px}.submission-status{font-size:12px;color:#777;font-style:italic}
@@ -186,13 +188,14 @@ a:focus-visible,summary:focus-visible{outline:2px solid #247caf;outline-offset:5
 @media screen and (max-width:480px){.wrapper{padding:0 21px}body{font-size:14px}.paper{grid-template-columns:1fr;gap:7px;margin-bottom:25px}.venue{justify-self:start;padding:2px 7px;font-size:10px}.venue span{display:inline;margin-left:7px}.authors{font-size:12px}h2{font-size:22px}h3{font-size:14px}}
 @media screen and (max-width:480px){.paper.has-figure{gap:16px;align-items:start}.paper-figure{align-self:start;margin-top:5px}.figure-badge{font-size:10px;min-width:48px;padding:1px 8px;top:4px}.paper h3{font-size:14px}.authors,.publication-venue{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{header{position:static;float:none;width:auto;padding:0}section{width:auto;float:none;padding:20px 0}.page-nav,.portrait,.skip-link{display:none}.wrapper{width:auto}.paper{break-inside:avoid}body{font-size:11pt}}
+@media print{header{position:static;float:none;width:auto;padding:0}section{width:auto;float:none;padding:20px 0}.page-nav,.portrait,.skip-link,.language-switch{display:none}.wrapper{width:auto}.paper{break-inside:avoid}body{font-size:11pt}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#about">Skip to content</a>
 <div class="wrapper">
 <header>
+<div class="language-switch" role="group" aria-label="Language / 语言" hidden><button type="button" data-language="en" lang="en" aria-pressed="true">English</button><span aria-hidden="true">/</span><button type="button" data-language="zh" lang="zh-CN" aria-pressed="false">中文</button></div>
 <img class="portrait" src="portrait.jpg" alt="Zizhuo Xu" width="112" height="112">
 <h1>Zizhuo Xu</h1>
 <p class="role">Postdoctoral Fellow</p>
@@ -220,5 +223,47 @@ a:focus-visible,summary:focus-visible{outline:2px solid #247caf;outline-offset:5
 <p class="page-footer">© 2026 Zizhuo Xu · Based on <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a>.</p>
 </section></main>
 </div>
+
+<script>
+(() => {
+  'use strict';
+  const chinese = {".skip-link": "跳转到正文", ".role": "博士后研究员", ".affiliation": "香港科技大学\u003cbr>计算机科学与工程学系", ".page-nav a[href=\"#about\"]": "关于我", ".page-nav a[href=\"#publications\"]": "研究论文", ".page-nav a[href=\"#service\"]": "学术服务", "#about": "关于我", "#about + p": "我目前在\u003ca href=\"https://hkust.edu.hk/\">香港科技大学\u003c/a>\u003ca href=\"https://cse.hkust.edu.hk/\">计算机科学与工程学系\u003c/a>担任博士后研究员。我于 2026 年 3 月获得香港科技大学数据科学与分析博士学位。此前，我于 2021 年 7 月获得\u003ca href=\"https://www.cornell.edu/\">康奈尔大学\u003c/a>生物统计学与数据科学硕士学位，并于 2020 年 5 月获得\u003ca href=\"https://www.udel.edu/\">特拉华大学\u003c/a>统计学学士学位，辅修计算机科学。", "#research": "研究兴趣", ".interests": "\u003cli>\u003cstrong>数据管理：\u003c/strong>时空数据、图数据与未来路径管理。\u003c/li>\u003cli>\u003cstrong>智能交通：\u003c/strong>交通预测、路径规划与交通信号控制。\u003c/li>\u003cli>\u003cstrong>仿真：\u003c/strong>交通仿真与数字孪生。\u003c/li>", "#publications": "研究论文", "#service": "学术服务", ".service": "\u003cli>\u003cstrong>期刊审稿人：\u003c/strong>World Wide Web Journal。\u003c/li>\u003cli>\u003cstrong>会议审稿人：\u003c/strong>ACM SIGSPATIAL 2026。\u003c/li>\u003cli>\u003cstrong>期刊外部审稿人：\u003c/strong>IEEE TKDE、IEEE Internet of Things Journal 和 The VLDB Journal。\u003c/li>\u003cli>\u003cstrong>会议外部审稿人：\u003c/strong>VLDB 2022；ICDE 2022–2024；KDD 2023–2025；CIKM 2022–2024；ICDM 2023；WSDM 2022。\u003c/li>", ".page-footer": "© 2026 Zizhuo Xu · 基于 \u003ca href=\"https://github.com/yaoyao-liu/minimal-light\">Minimal Light\u003c/a> 模板。", ".papers > li:nth-child(1) h3": "FutureLight：面向交通信号控制的交通感知强化学习框架", ".papers > li:nth-child(1) .publication-venue": "国际超大型数据库会议（\u003cstrong>VLDB\u003c/strong>），2026。", ".papers > li:nth-child(2) h3": "基于共享策略框架的可扩展交通信号控制", ".papers > li:nth-child(2) .publication-venue": "国际机器学习大会（\u003cstrong>ICML\u003c/strong>），2026。", ".papers > li:nth-child(3) h3": "iKSP：面向道路网络的路径枚举索引", ".papers > li:nth-child(3) .publication-venue": "IEEE 国际数据工程会议（\u003cstrong>ICDE\u003c/strong>），2026。", ".papers > li:nth-child(4) h3": "利用动态未来路径实现超灵活、可解释且可扩展的交通预测", ".papers > li:nth-child(4) .publication-venue": "IEEE 国际数据工程会议（\u003cstrong>ICDE\u003c/strong>），2025。", ".papers > li:nth-child(5) h3": "RouteSys：未来路径数据管理系统", ".papers > li:nth-child(5) .publication-venue": "ACM SIGSPATIAL 国际地理信息系统进展大会（\u003cstrong>SIGSPATIAL\u003c/strong>），2025。", ".papers > li:nth-child(6) h3": "面向道路网络中海量出行查询的全局最优出行规划", ".papers > li:nth-child(6) .publication-venue": "IEEE 知识与数据工程汇刊（\u003cstrong>TKDE\u003c/strong>），2024。", ".papers > li:nth-child(7) h3": "Managing the Future：交通系统中的路径规划影响评估", ".papers > li:nth-child(7) .publication-venue": "IEEE 国际数据工程会议（\u003cstrong>ICDE\u003c/strong>），2024。", ".papers > li:nth-child(8) h3": "道路网络中的全局路径优化", ".papers > li:nth-child(8) .publication-venue": "IEEE 国际数据工程会议（\u003cstrong>ICDE\u003c/strong>），2023。"};
+  const entries = Object.entries(chinese).map(([selector, zh]) => {
+    const element = document.querySelector(selector);
+    return {element, en: element.innerHTML, zh};
+  });
+  const figures = Array.from(document.querySelectorAll('.paper-figure')).map(link => ({
+    link, image: link.querySelector('img'), label: link.getAttribute('aria-label'),
+    alt: link.querySelector('img').alt
+  }));
+  const nav = document.querySelector('.page-nav');
+  const profile = document.querySelector('main section');
+  const description = document.querySelector('meta[name="description"]');
+  const englishDescription = description.content;
+  const buttons = Array.from(document.querySelectorAll('[data-language]'));
+  function setLanguage(language) {
+    const zh = language === 'zh';
+    document.documentElement.lang = zh ? 'zh-CN' : 'en';
+    entries.forEach(entry => { entry.element.innerHTML = zh ? entry.zh : entry.en; });
+    figures.forEach(({link, image, label, alt}) => {
+      const title = link.closest('li').querySelector('h3').textContent;
+      link.setAttribute('aria-label', zh ? '查看原图：' + title : label);
+      image.alt = zh ? title + '——论文示意图' : alt;
+    });
+    nav.setAttribute('aria-label', zh ? '页面导航' : 'Page sections');
+    profile.setAttribute('aria-label', zh ? '学术简介' : 'Academic profile');
+    document.title = zh ? 'Zizhuo Xu | 香港科技大学' : 'Zizhuo Xu | HKUST';
+    description.content = zh ? 'Zizhuo Xu，香港科技大学博士后研究员，研究方向包括时空与图数据管理、智能交通、交通预测及路径规划。' : englishDescription;
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+    try { localStorage.setItem('homepage-language', language); } catch (_) {}
+  }
+  let language = 'en';
+  try { if (localStorage.getItem('homepage-language') === 'zh') language = 'zh'; } catch (_) {}
+  setLanguage(language);
+  buttons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+  document.querySelector('.language-switch').hidden = false;
+})();
+</script>
+
 </body>
 </html>
